@@ -21,3 +21,5 @@ js/lib/
 generated/
 .idea/
 .vscode/
+js-beautify
+js-beautify-1.14.11.tgz
