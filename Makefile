@@ -2,7 +2,8 @@ PROJECT_ROOT=$(subst \,/,$(dir $(realpath $(firstword $(MAKEFILE_LIST)))))
 BUILD_DIR=$(PROJECT_ROOT)build
 SCRIPT_DIR=$(PROJECT_ROOT)tools
 SHELL=/bin/bash
-PYTHON=$(SCRIPT_DIR)/python
+#PYTHON=$(SCRIPT_DIR)/python
+PYTHON=python3
 NODE=$(SCRIPT_DIR)/node
 NPM=$(SCRIPT_DIR)/npm
 
