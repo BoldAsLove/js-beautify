@@ -1283,11 +1283,6 @@ Beautifier.prototype.handle_operator = function(current_token) {
     this.allow_wrap_or_preserved_newline(current_token);
     space_before = this._flags.last_token.type === TOKEN.START_BLOCK;
     space_after = false;
-  } else if (current_token.text === '?') { // check for '??' and don't allow space between them... looking at it this may not work if this._output.space_before_token set to true....
-    // but really the entire token should be '??' so this code shouldnt even be here for this, yea? I think the terenary depth is messed up with ??
-    this.allow_wrap_or_preserved_newline(current_token);
-    space_before = this._flags.last_token === '?' ? false : space_before;
-    space_after = this._tokens.peek() === '?' ? false : space_after;
   } else if (in_array(current_token.text, ['--', '++', '!', '~']) || isUnary) {
     // unary operators (and binary +/- pretending to be unary) special cases
     if (this._flags.last_token.type === TOKEN.COMMA || this._flags.last_token.type === TOKEN.START_EXPR) {
